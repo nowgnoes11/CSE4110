@@ -1,0 +1,107 @@
+drop table product;
+drop table customer;
+drop table online_sales;
+drop table contract_sales;
+
+create table customer
+	(ID varchar(6),
+    NAME varchar(20) not null,
+    phone varchar(9),
+    acoount_num varchar(9),
+    card_num varchar(12),
+    Address varchar(40)
+    );
+create table product
+	(product_id varchar(8),
+    type varchar (10),
+    manufacturer varchar(10),
+    stored_location varchar(8),
+    price int,
+    amount int
+    );
+create table online_sales
+	(sales_num varchar(10),
+    product_id varchar(8),
+    ship_num varchar(4),
+    ID varchar(6),
+    price int,
+    NAME varchar(20) not null,
+    phone varchar(9),
+    car_num varchar(12),
+    Address varchar(40),
+    amount int,
+    arrivedate varchar(8),
+    orderdate varchar(8),
+    expectdate varchar(8)
+    );
+create table contact_sales
+	(sales_num varchar(10),
+    product_id varchar(8),
+    ID varchar(6),
+    name varchar(20) not null,
+    phone varchar(9),
+    account_num varchar(9),
+    orderdate varchar(8),
+    amount int
+	);          
+
+insert into customer values ('000000' ,'A', '000000000', '000000000', '000000000000', 'AAA');
+insert into customer values ('000001' ,'B', '000000001', '000000001', '000000000001', 'BBB');
+insert into customer values ('000002' ,'C', '000000002', '000000002', '000000000002', 'CCC');
+insert into customer values ('000003' ,'D', '000000003', '000000003', '000000000003', 'DDD');
+insert into customer values ('000004' ,'E', '000000004', '000000004', '000000000004', 'EEE');
+insert into customer values ('000005' ,'F', '000000005', '000000005', '000000000005', 'FFF');
+insert into customer values ('000006' ,'G', '000000006', '000000006', '000000000006', 'GGG');
+insert into customer values ('000007' ,'H', '000000007', '000000007', '000000000007', 'HHH');
+insert into customer values ('000008' ,'I', '000000008', '000000008', '000000000008', 'III');
+insert into customer values ('000009' ,'J', '000000009', '000000009', '000000000009', 'JJJ');
+insert into customer values ('000010' ,'K', '000000010', '000000010', '000000000010', 'KKK');
+insert into customer values ('000011' ,'L', '000000011', '000000011', '000000000011', 'LLL');
+insert into customer values ('000012' ,'M', '000000012', '000000012', '000000000012', 'MMM');
+insert into customer values ('000013' ,'N', '000000013', '000000013', '000000000013', 'NNN');
+insert into customer values ('000014' ,'O', '000000014', '000000014', '000000000014', 'OOO');
+insert into product values('00000000', 'a', 'aa', 'seoul', '1000', '13');
+insert into product values('00000001', 'b', 'bb', 'seoul', '1001', '14');
+insert into product values('00000002', 'c', 'cc', 'seoul', '1002', '15');
+insert into product values('00000003', 'd', 'dd', 'busan', '1003', '10');
+insert into product values('00000004', 'e', 'aa', 'busan', '999', '113');
+insert into product values('00000005', 'f', 'aa', 'LA', '10300', '123');
+insert into product values('00000006', 'a', 'bb', 'sinchon', '2000', '133');
+insert into product values('00000007', 'b', 'cc', 'mapo', '13000', '213');
+insert into product values('00000008', 'c', 'dd', 'NY', '51000', '183');
+insert into product values('00000009', 'd', 'ee', 'kkk', '10', '10003');
+insert into product values('00000010', 'e', 'bb', 'sss', '999999', '0');
+insert into product values('00000011', 'a', 'dd', 'eee', '100', '1003');
+insert into product values('00000012', 'a', 'cc', 'lll', '10000', '153');
+insert into product values('00000013', 'a', 'aa', 'ooo', '12000', '1');
+insert into product values('00000014', 'a', 'cc', 'seoul', '1000', '13');
+insert into online_sales values('0000000000', '00000000', '0000', '000000', '1000','A', '000000000', '000000000000', 'AAA', '100', '20220304', '20220301', '20220304');
+insert into online_sales values('0000000001', '00000001', '0001', '000001', '1001','B', '000000001', '000000000001', 'BBB', '10', '20220305', '20220303', '20220304');
+insert into online_sales values('0000000002', '00000011', '0002', '000002', '100','C', '000000002', '000000000002', 'CCC', '300', '20220303', '20220301', '20220304');
+insert into online_sales values('0000000003', '00000000', '0003', '000003', ''1000,'D', '000000003', '000000000004', 'DDD', '700', '20220404', '20220301', '20220304');
+insert into online_sales values('0000000004', '00000008', '0004', '000004', '51000','E', '000000004', '000000000004', 'EEE', '3', '20220603', '20220601', '20220603');
+insert into online_sales values('0000000005', '00000012', '0005', '000005', '10000','F', '000000005', '000000000005', 'FFF', '1300', '20210403', '20210401', '20210404');
+insert into online_sales values('0000000006', '00000009', '0006', '000006', '10','A', '000000000', '000000000000', 'AAA', '25', '20211103', '20211101', '2021103');
+insert into online_sales values('0000000007', '00000006', '0007', '000007', '2000','A', '000000000', '000000000000', 'AAA', '7', '20210703', '20210701', '20210703');
+insert into online_sales values('0000000008', '00000005', '0008', '000001', '10300','B', '000000001', '000000000001', 'BBB', '100', '20220905', '20220903', '20220905');
+insert into online_sales values('0000000009', '00000002', '0009', '000002', '1002','C', '000000002', '000000000002', 'CCC', '3', '20220803', '20220801', '20220803');
+insert into online_sales values('0000000010', '00000003', '0010', '000004', '1003','E', '000000004', '000000000004', 'EEE', '133', '20210403', '20210401', '20210403');
+insert into online_sales values('0000000011', '00000000', '0011', '000005', '1000','F', '000000005', '000000000005', 'FFF', '4300', '20210103', '20210101', '20210104');
+insert into online_sales values('0000000012', '00000004', '0012', '000001', '999','B', '000000001', '000000000001', 'BBB', '130', '20220505', '20220503', '20220504');
+insert into online_sales values('0000000013', '00000007', '0013', '000002', '13000','C', '000000002', '000000000002', 'CCC', '39900', '20210304', '20210301', '20220304');
+insert into online_sales values('0000000014', '00000010', '0014', '000004', '999999','E', '000000004', '000000000004', 'EEE', '30', '20221003', '20221001', '20221003');
+insert into contact_sales values('0000000000', '00000000', '000000', '1000','A', '000000000', '000000000', '20210303', '1000');
+insert into contact_sales values('0000000001', '00000001', '000001', '1001','B', '000000001', '000000001', '20220304', '100');
+insert into contact_sales values('0000000002', '00000002', '000002', '1002','C', '000000002', '000000002', '20211003', '10');
+insert into contact_sales values('0000000003', '00000003', '000003', '1003','D', '000000003', '000000003', '20221203', '145');
+insert into contact_sales values('0000000004', '00000004', '000004', '999','E', '000000004', '000000004', '20210303', '23');
+insert into contact_sales values('0000000005', '00000001', '000000', '1001','A', '000000000', '000000000', '20220203', '100');
+insert into contact_sales values('0000000006', '00000006', '000002', '2000','C', '000000002', '000000002', '20221103', '18');
+insert into contact_sales values('0000000007', '00000008', '000003', '51000','D', '000000003', '000000003', '20210903', '1345');
+insert into contact_sales values('0000000008', '00000010', '000004', '999999','E', '000000004', '000000004', '20220203', '203');
+insert into contact_sales values('0000000009', '00000014', '000000', '1000','A', '000000000', '000000000', '20210403', '130');
+insert into contact_sales values('0000000010', '00000013', '000000', '12000','A', '000000000', '000000000', '20220103', '10');
+insert into contact_sales values('0000000011', '00000011', '000001','100', 'B', '000000001', '000000001', '20210904', '540');
+insert into contact_sales values('0000000012', '00000005', '000002','10300', 'C', '000000002', '000000002', '20221003', '190');
+insert into contact_sales values('0000000013', '00000009', '000003', '1003','D', '000000003', '000000003', '20211203', '1045');
+insert into contact_sales values('0000000014', '00000002', '000004','13000', 'E', '000000004', '000000004', '20220303', '23');
